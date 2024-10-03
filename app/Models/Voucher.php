@@ -31,7 +31,7 @@ class Voucher extends Model
 
     private function isInDateRange(): bool
     {
-        return $this->start_date <= now() && $this->end_date >= now();
+        return $this->end_date >= now();
     }
 
     private function canBeRedeemed(): bool
